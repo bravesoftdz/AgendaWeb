@@ -1,0 +1,143 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{6FA40BD9-C8A7-4F32-A9EC-ED7C8171F363}</ProjectGuid>
+			<ProjectVersion>12.0</ProjectVersion>
+			<MainSource>Agenda.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<GenDll>true</GenDll>
+			<DCC_Description>Analista / Desenvolvedor: Jairo dos Santos Gurgel</DCC_Description>
+			<DCC_UnitSearchPath>C:\Program Files\Embarcadero\Patterns\Lib;C:\Program Files\Embarcadero\Patterns\Form;C:\Program Files\Embarcadero\Components\UniDAC.v.7.0.1\Source;C:\Program Files\Embarcadero\Components\UniDAC.v.7.0.1\Lib\Delphi14;C:\Program Files\Embarcadero\Components\Zeoslib\src\component;C:\Program Files\Embarcadero\Components\Zeoslib\src\core;C:\Program Files\Embarcadero\Components\Zeoslib\src\dbc;C:\Program Files\Embarcadero\Components\Zeoslib\src\parsesql;C:\Program Files\Embarcadero\Components\Zeoslib\src\plain;C:\Program Files\Embarcadero\Components\fortesreport-ce\Source;C:\Program Files\Embarcadero\Components\EMS.Advanced.Data.Export.VCL.4.10.0.2\Source;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+			<DCC_UsePackage>rtl;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;vclx;vcl;vclactnband;vclie;vclimg;xmlrtl;inet;dbrtl;dsnap;vcldb;inetdb;IndySystem;IndyCore;IndyProtocols;DbxClientDriver;inetdbxpress;bdertl;inetdbbde;DataSnapServer;DBXInterBaseDriver;DBXMySQLDriver;dbxcds;DBXFirebirdDriver;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;Rave77VCL;vcldbx;vcltouch;dsnapcon;TeeUI;TeeDB;Tee;vclib;ibxpress;adortl;intrawebdb_100_140;Intraweb_100_140;VclSmp;vclribbon;ZComponent;ZDbc;ZPlain;ZCore;ZParseSql;websnap;webdsnap;soaprtl;dpk_Imagem;WinSkinD2010;dacvcl140;dac140;crcontrols140;unidacvcl140;unidac140;oraprovider140;accessprovider140;odbcprovider140;adsprovider140;aseprovider140;db2provider140;dbfprovider140;pckUserControl_RT;pckUCDataConnector;pckZeosConn;QExport4RT_D14;myprovider140;pgprovider140;ibprovider140;msprovider140;QBuilderDT_D14;QBuilderRT_D14;TSSUID2010;TSSCoreD2010;QImport3RT_D14;liteprovider140;SynEdit_R2011;uniGUI15VCL;uniGUI15Chart</DCC_UsePackage>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_DependencyCheckOutputName>Agenda.dll</DCC_DependencyCheckOutputName>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_Platform>x86</DCC_Platform>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="Agenda.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="ServerModule.pas">
+				<Form>UniServerModule</Form>
+				<DesignClass>TUniGUIServerModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="MainModule.pas">
+				<Form>UniMainModule</Form>
+				<DesignClass>TUniGUIMainModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="fmMain.pas">
+				<Form>frmMain</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="fmCadUsuario.pas">
+				<Form>frmCadUsuario</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="fmAltSenha.pas">
+				<Form>frmAltSenha</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="C:\Program Files\Embarcadero\Patterns\Form\fmCadPatterns.pas">
+				<Form>frmCadPatterns</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="C:\Program Files\Embarcadero\Patterns\Form\fmFormPatterns.pas">
+				<Form>frmFormPatterns</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<DCCReference Include="fmCadContatos.pas">
+				<Form>frmCadContatos</Form>
+			</DCCReference>
+			<DCCReference Include="fmLogin.pas">
+				<Form>frmLogin</Form>
+				<DesignClass>TUniForm</DesignClass>
+			</DCCReference>
+			<None Include="ModelSupport_Agenda\default.txaPackage"/>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">Agenda.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">3</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1046</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.3</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.3b</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments">Analista / Desenvolvedor: Jairo dos Santos Gurgel</VersionInfoKeys>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dcloffice2k140.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dclofficexp140.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+				<ModelSupport>True</ModelSupport>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>
